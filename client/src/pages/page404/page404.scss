@@ -1,0 +1,22 @@
+.not-found {
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+    &__wrapper {
+        text-align: center;
+    }
+    &__code {
+        font-size: 90px;
+    }
+    &__btn {
+        display: block;
+        border-radius: 60px;
+        padding: 20px 30px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        background-color: var(#{--weather-search-btn-default});
+        cursor: pointer;
+        margin: 35px auto 0;
+    }
+}

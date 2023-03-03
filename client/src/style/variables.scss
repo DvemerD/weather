@@ -1,0 +1,286 @@
+// body {
+$body-bgr-light: linear-gradient(#00b3ffad 0%, #9cff95c7 100%);
+$body-bgr-dark: linear-gradient(#b290ff 0%, #2e1d65 100%);
+
+//header
+$burger-menu-light: #594e78;
+$burger-menu-dark: #fff;
+
+$logo-text-light: #432c85;
+$logo-text-dark: #fff;
+
+$header-bgr-light: #fff;
+$header-bgr-dark: #2b244d;
+$header-title-dark: #fff;
+$header-title-light: #221c48;
+
+$toggle-name-light: #25227b;
+$toggle-name-dark: #fff;
+$toggle-bg-active: #ff0070;
+$toggle-boll-light: #332755;
+$toggle-boll-dark: #fff;
+$toggle-bg: #747474;
+
+//menu
+
+$menu-header-bgr-light: linear-gradient(to right, #00ff9b, #5f84fb);
+$menu-header-bgr-dark: linear-gradient(to right, #000, #372865);
+
+$menu-list-bgr-light: #fff;
+$menu-list-bgr-dark: #211545;
+
+$menu-list-text-color-light: #000;
+$menu-list-text-color-dark: #fff;
+
+//weatherList
+
+// $weather-list-bgr-light: #fff;
+// $weather-list-bgr-dark: linear-gradient(#b290ff 0%, #2e1d65 100%);
+
+$weather-list-item-bgr-light: #fff;
+$weather-list-item-bgr-dark: linear-gradient(#00057a 0%, #721c87 100%);
+
+$weather-list-text-light: #020202;
+$weather-list-text-dark: #fff;
+
+$weather-list-degree-light: #707070;
+$weather-list-degree-dark: #fff;
+
+$weather-list-temp-name-light: #432c85;
+$weather-list-temp-name-dark: #fff;
+
+$weather-item-add-light: #f5f8ff;
+$weather-item-add-dark: #39518a;
+$weather-item-add-line-light: #7effcc;
+$weather-item-add-line-dark: linear-gradient(#faa 0%, #fff99d 100%);
+
+//weatherInfo
+
+$circle-bgr-first-light: linear-gradient(#9cff95 0%, #00b3ff 100%);
+$circle-bgr-first-dark: linear-gradient(#fc7db8 0%, #495cfc 100%);
+$circle-bgr-second-light: linear-gradient(#9cff95 0%, #0fd 100%);
+$circle-bgr-second-dark: linear-gradient(#ff8b8b 0%, #6676ff 100%);
+
+$weather-info-header-light: linear-gradient(#73abff9f 0%, #92e9ff9c 60%, rgba(255, 255, 255, 0.466) 100%);
+$weather-info-header-dark: linear-gradient(#300d65 0%, #2a2a8f 60%, rgba(42, 42, 143, 0.466) 100%);
+
+$button-back-bgr-light: #0fd;
+$button-back-bgr-dark: #2b244d;
+
+//weatherSearch
+
+// $weather-search-bgr-light: linear-gradient(#00b3ff 0%, #9cff95 100%);
+// $weather-search-bgr-dark: linear-gradient(#b290ff 0%, #2e1d65 100%);
+
+// $weather-search-wrapper-light: #fff;
+// $weather-search-wrapper-dark: linear-gradient(#b290ff 0%, #2e1d65 100%);
+
+$weather-search-title-light: #0c1066;
+$weather-search-title-dark: #fff;
+
+$weather-search-btn-light: #31feae;
+$weather-search-btn-dark: #2b244d;
+
+$weather-search-content-light: #58dfc471;
+$weather-search-content-dark: linear-gradient(#00057a 0%, #721c87 100%);
+
+$weather-search-text-light: #020202;
+$weather-search-text-dark: #fff;
+
+$weather-search-degree-light: #707070;
+$weather-search-degree-dark: #fff;
+
+$weather-search-temp-name-light: #432c85;
+$weather-search-temp-name-dark: #fff;
+
+$weather-search-content-btn-light: #31feae;
+$weather-search-content-btn-dark: #2b244d;
+
+$weather-search-form-bgr-light: #fff;
+$weather-search-form-bgr-dark: linear-gradient(#2e1d65 0%, #b290ff 100%);
+
+//authorizationForm
+
+$form-section-bgr-light: linear-gradient(#00b3ff 0%, #9cff95 100%);
+$form-section-bgr-dark: linear-gradient(#b290ff 0%, #2e1d65 100%);
+
+$form-bgr-light: #fff;
+$form-bgr-dark: linear-gradient(#00057a 0%, #721c87 100%);
+
+$form-title-color-light: #0c1066;
+$form-title-color-dark: #fff;
+
+$form-btn-bgr-light: #00ff9b;
+$form-btn-bgr-dark: #2b244d;
+
+$form-subtitle-color-light: rgb(51, 51, 51);
+$form-subtitle-color-dark: #fff;
+
+//spinner
+
+$spinner-first-circle-light: #00ff9b;
+$spinner-first-circle-dark: #fff;
+
+$spinner-second-circle-light: #5f84fb;
+$spinner-second-circle-dark: #432c85;
+
+:root {
+    // body {
+    --body-bgr-light: #{$body-bgr-light};
+    --body-bgr-dark: #{$body-bgr-dark};
+    --body-bgr-default: var(#{--body-bgr-light});
+    //header
+    --burger-menu-light: #{$burger-menu-light};
+    --burger-menu-dark: #{$burger-menu-dark};
+    --burger-menu-default: var(#{--burger-menu-light});
+
+    --logo-text-light: #{$logo-text-light};
+    --logo-text-dark: #{$logo-text-dark};
+    --logo-text-default: var(#{--logo-text-light});
+
+    --header-bgr-light: #{$header-bgr-light};
+    --header-bgr-dark: #{$header-bgr-dark};
+    --header-bgr-default: var(#{--header-bgr-light});
+
+    --header-title-light: #{$header-title-light};
+    --header-title-dark: #{$header-title-dark};
+    --header-title-default: var(#{--header-title-light});
+
+    --toggle-name-light: #{$toggle-name-light};
+    --toggle-name-dark: #{$toggle-name-dark};
+    --toggle-name-default: var(#{--toggle-name-light});
+
+    --toggle-boll-light: #{$toggle-boll-light};
+    --toggle-boll-dark: #{$toggle-boll-dark};
+    --toggle-boll-default: var(#{--toggle-boll-light});
+
+    //menu
+
+    --menu-header-bgr-light: #{$menu-header-bgr-light};
+    --menu-header-bgr-dark: #{$menu-header-bgr-dark};
+    --menu-header-bgr-default: var(#{--menu-header-bgr-light});
+
+    --menu-list-bgr-light: #{$menu-list-bgr-light};
+    --menu-list-bgr-dark: #{$menu-list-bgr-dark};
+    --menu-list-bgr-default: var(#{--menu-list-bgr-light});
+
+    --menu-list-text-color-light: #{$menu-list-text-color-light};
+    --menu-list-text-color-dark: #{$menu-list-text-color-dark};
+    --menu-list-text-color-default: var(#{--menu-list-text-color-light});
+
+    //weatherList
+
+    // --weather-list-bgr-light: #{$weather-list-bgr-light};
+    // --weather-list-bgr-dark: #{$weather-list-bgr-dark};
+    // --weather-list-bgr-default: var(#{--weather-list-bgr-light});
+
+    //weatherListItem
+
+    --weather-list-item-bgr-light: #{$weather-list-item-bgr-light};
+    --weather-list-item-bgr-dark: #{$weather-list-item-bgr-dark};
+    --weather-list-item-bgr-default: var(#{--weather-list-item-bgr-light});
+
+    --weather-list-text-light: #{$weather-list-text-light};
+    --weather-list-text-dark: #{$weather-list-text-dark};
+    --weather-list-text-default: var(#{--weather-list-text-light});
+
+    --weather-list-degree-light: #{$weather-list-degree-light};
+    --weather-list-degree-dark: #{$weather-list-degree-dark};
+    --weather-list-degree-default: var(#{--weather-list-degree-light});
+
+    --weather-list-temp-name-light: #{$weather-list-temp-name-light};
+    --weather-list-temp-name-dark: #{$weather-list-temp-name-dark};
+    --weather-list-temp-name-default: var(#{--weather-list-temp-name-light});
+
+    --weather-item-add-light: #{$weather-item-add-light};
+    --weather-item-add-dark: #{$weather-item-add-dark};
+    --weather-item-add-default: var(#{--weather-item-add-light});
+
+    --weather-item-add-line-light: #{$weather-item-add-line-light};
+    --weather-item-add-line-dark: #{$weather-item-add-line-dark};
+    --weather-item-add-line-default: var(#{--weather-item-add-line-light});
+
+    //weatherInfo
+
+    --circle-bgr-first-light: #{$circle-bgr-first-light};
+    --circle-bgr-first-dark: #{$circle-bgr-first-dark};
+    --circle-bgr-first-default: var(#{--circle-bgr-first-light});
+
+    --circle-bgr-second-light: #{$circle-bgr-second-light};
+    --circle-bgr-second-dark: #{$circle-bgr-second-dark};
+    --circle-bgr-second-default: var(#{--circle-bgr-second-light});
+
+    --weather-info-header-light: #{$weather-info-header-light};
+    --weather-info-header-dark: #{$weather-info-header-dark};
+    --weather-info-header-default: var(#{--weather-info-header-light});
+
+    --button-back-bgr-light: #{$button-back-bgr-light};
+    --button-back-bgr-dark: #{$button-back-bgr-dark};
+    --button-back-bgr-default: var(#{--button-back-bgr-light});
+
+    //weatherSearch
+
+    // --weather-search-bgr-light: #{$weather-search-bgr-light};
+    // --weather-search-bgr-dark: #{$weather-search-bgr-dark};
+    // --weather-search-bgr-default: var(#{--weather-search-bgr-light});
+
+    --weather-search-btn-light: #{$weather-search-btn-light};
+    --weather-search-btn-dark: #{$weather-search-btn-dark};
+    --weather-search-btn-default: var(#{--weather-search-btn-light});
+
+    --weather-search-title-light: #{$weather-search-title-light};
+    --weather-search-title-dark: #{$weather-search-title-dark};
+    --weather-search-title-default: var(#{--weather-search-title-light});
+
+    --weather-search-form-bgr-light: #{$weather-search-form-bgr-light};
+    --weather-search-form-bgr-dark: #{$weather-search-form-bgr-dark};
+    --weather-search-form-bgr-default: var(#{--weather-search-form-bgr-light});
+
+    --weather-search-content-light: #{$weather-search-content-light};
+    --weather-search-content-dark: #{$weather-search-content-dark};
+    --weather-search-content-default: var(#{--weather-search-content-light});
+
+    --weather-search-text-light: #{$weather-search-text-light};
+    --weather-search-text-dark: #{$weather-search-text-dark};
+    --weather-search-text-default: var(#{--weather-search-text-light});
+
+    --weather-search-degree-light: #{$weather-search-degree-light};
+    --weather-search-degree-dark: #{$weather-search-degree-dark};
+    --weather-search-degree-default: var(#{--weather-search-degree-light});
+
+    --weather-search-temp-name-light: #{$weather-search-temp-name-light};
+    --weather-search-temp-name-dark: #{$weather-search-temp-name-dark};
+    --weather-search-temp-name-default: var(#{--weather-search-temp-name-light});
+
+    //autorizationForm
+
+    --form-section-bgr-light: #{$form-section-bgr-light};
+    --form-section-bgr-dark: #{$form-section-bgr-dark};
+    --form-section-bgr-default: var(#{--form-section-bgr-light});
+
+    --form-bgr-light: #{$form-bgr-light};
+    --form-bgr-dark: #{$form-bgr-dark};
+    --form-bgr-default: var(#{--form-bgr-light});
+
+    --form-title-color-light: #{$form-title-color-light};
+    --form-title-color-dark: #{$form-title-color-dark};
+    --form-title-color-default: var(#{--form-title-color-light});
+
+    --form-btn-bgr-light: #{$form-btn-bgr-light};
+    --form-btn-bgr-dark: #{$form-btn-bgr-dark};
+    --form-btn-bgr-default: var(#{--form-btn-bgr-light});
+
+    --form-subtitle-color-light: #{$form-subtitle-color-light};
+    --form-subtitle-color-dark: #{$form-subtitle-color-dark};
+    --form-subtitle-color-default: var(#{--form-subtitle-color-light});
+
+    //spinner
+
+    --spinner-first-circle-light: #{$spinner-first-circle-light};
+    --spinner-first-circle-dark: #{$spinner-first-circle-dark};
+    --spinner-first-circle-default: var(#{--spinner-first-circle-light});
+
+    --spinner-second-circle-light: #{$spinner-second-circle-light};
+    --spinner-second-circle-dark: #{$spinner-second-circle-dark};
+    --spinner-second-circle-default: var(#{--spinner-second-circle-light});
+}

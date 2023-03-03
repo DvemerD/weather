@@ -1,0 +1,383 @@
+.weather {
+    position: relative;
+    &__wrapper {
+        position: relative;
+        .swiper-button-prev {
+            left: -15px;
+            &::after {
+                content: "";
+                border: 40px solid transparent;
+                border-right: 40px solid #00ffbb;
+            }
+        }
+        .swiper-button-next {
+            right: -15px;
+            &::after {
+                content: "";
+                border: 40px solid transparent;
+                border-left: 40px solid #00ffbb;
+            }
+        }
+    }
+    &__list {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        padding: 100px;
+        &-item {
+            position: relative;
+            width: 474px;
+            height: 776px;
+            text-align: center;
+            padding: 30px;
+            margin: 0 auto;
+            overflow: hidden;
+            font-family: "Segoe UI";
+            color: var(#{--weather-list-text-default});
+            background: var(#{--weather-list-item-bgr-default});
+            border-radius: 50px;
+            -webkit-box-shadow: 0px 0px 25px 3px rgba(34, 60, 80, 0.1);
+            -moz-box-shadow: 0px 0px 25px 3px rgba(34, 60, 80, 0.1);
+            box-shadow: 0px 0px 25px 3px rgba(34, 60, 80, 0.1);
+            cursor: pointer;
+            &:hover .weather__delete-item {
+                display: block;
+            }
+            .city-name {
+                margin: 0;
+                font-weight: 400;
+                font-size: 30px;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 85%;
+                pointer-events: none;
+            }
+            .weather-img {
+                -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 179, 255, 0.41);
+                box-shadow: 0px 0px 50px 0px rgba(0, 179, 255, 0.41);
+            }
+            .weather-icon {
+                width: 275px;
+                height: 275px;
+                margin: 90px auto 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                > svg {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .temperature__text {
+                display: inline-block;
+                margin-top: 20px;
+                font-weight: 300;
+                font-size: 120px;
+                line-height: 120px;
+                position: relative;
+                > span {
+                    position: absolute;
+                }
+                > span:first-of-type {
+                    left: -0.4em;
+                }
+            }
+            .temperature__name {
+                margin-top: 35px;
+                font-weight: 300;
+                font-size: 30px;
+                line-height: 30px;
+                letter-spacing: 0.1em;
+                color: var(#{--weather-list-temp-name-default});
+                text-transform: uppercase;
+            }
+            .temperture__containers {
+                margin-top: 35px;
+                display: flex;
+                justify-content: space-between;
+                .temperture__max,
+                .temperture__min {
+                    font-weight: 300;
+                    font-size: 60px;
+                    color: var(#{--weather-list-text-default});
+                    position: relative;
+                    margin: 0 40px;
+                    text-align: center;
+                    display: inline-block;
+                    > span {
+                        position: absolute;
+                        left: -0.4em;
+                    }
+                }
+                .temperture__max {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background-image: url(../../assets/icons/max-arrow.svg);
+                        background-size: 20px 20px;
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        top: 3px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    &::after {
+                        content: "Max";
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: block;
+                        font-weight: 300;
+                        font-size: 30px;
+                        line-height: 30px;
+                        letter-spacing: 0.1em;
+                        color: #f00;
+                    }
+                }
+                .temperture__min {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background-image: url(../../assets/icons/min-arrow.svg);
+                        background-size: 20px 20px;
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        top: -6px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    &::after {
+                        content: "Min";
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: block;
+                        font-weight: 300;
+                        font-size: 30px;
+                        line-height: 30px;
+                        letter-spacing: 0.1em;
+                        color: #00ff9b;
+                    }
+                }
+            }
+        }
+        &-item_add {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: default;
+            .city-name {
+                position: relative;
+            }
+            .city-plus {
+                position: relative;
+                width: 200px;
+                height: 200px;
+                background: var(#{--weather-item-add-default});
+                border-radius: 100%;
+                margin: 0 auto;
+                -webkit-box-shadow: 0px 5px 5px 0px rgba(34, 60, 80, 0.1);
+                -moz-box-shadow: 0px 5px 5px 0px rgba(34, 60, 80, 0.1);
+                box-shadow: 0px 5px 5px 0px rgba(34, 60, 80, 0.1);
+                cursor: pointer;
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 13px;
+                    height: 145px;
+                    border-radius: 5px;
+                    background: var(#{--weather-item-add-line-default});
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 145px;
+                    height: 13px;
+                    border-radius: 5px;
+                    background: var(#{--weather-item-add-line-default});
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            .city-img {
+                width: 100%;
+                border-radius: 35px;
+                overflow: hidden;
+            }
+        }
+    }
+    &__delete-item {
+        display: none;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 160px;
+        height: 160px;
+        right: -80px;
+        top: -80px;
+        font-size: 40px;
+        line-height: 24px;
+        border-radius: 100%;
+        transition: display 1s;
+        > span {
+            display: block;
+            position: absolute;
+            left: 33px;
+            bottom: 33px;
+        }
+    }
+    .spinner__wrapper {
+        height: 100%;
+        .spinner {
+            width: 150px;
+        }
+    }
+}
+
+@media (max-width: 1919px) {
+    .weather {
+        height: 790px;
+        &__list {
+            padding: 80px 25px;
+            &-item {
+                width: 379px;
+                height: 620px;
+                padding: 24px;
+                border-radius: 40px;
+                .city-name {
+                    font-size: 24px;
+                }
+                .weather-icon {
+                    width: 220px;
+                    height: 220px;
+                    margin-top: 70px;
+                }
+                .temperature__text {
+                    margin-top: 16px;
+                    font-size: 96px;
+                    line-height: 96px;
+                    &::after {
+                        width: 22px;
+                        height: 22px;
+                        top: 0px;
+                        right: 92px;
+                    }
+                }
+                .temperature__name {
+                    margin-top: 28px;
+                    font-size: 24px;
+                    line-height: 24px;
+                }
+                .temperture__containers {
+                    margin-top: 28px;
+                    .temperture__max,
+                    .temperture__min {
+                        font-weight: 300;
+                        font-size: 48px;
+                        margin: 0 32px;
+                    }
+                    .temperture__max {
+                        &::before {
+                            top: 0px;
+                        }
+                        &::after {
+                            font-size: 24px;
+                            line-height: 24px;
+                        }
+                    }
+                    .temperture__min {
+                        &::before {
+                            top: -10px;
+                        }
+                        &::after {
+                            font-size: 24px;
+                            line-height: 24px;
+                        }
+                    }
+                }
+            }
+            &-item_add {
+                .city-plus {
+                    width: 160px;
+                    height: 160px;
+                    &::before {
+                        width: 10px;
+                        height: 116px;
+                    }
+                    &::after {
+                        width: 116px;
+                        height: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .weather {
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .weather {
+        &__list {
+            padding: 50px 15px;
+            &-item {
+                width: 289px;
+                height: 620px;
+                padding: 20px;
+                .temperature__text {
+                    font-size: 70px;
+                    line-height: 70px;
+                }
+                .temperature__name {
+                    font-size: 22px;
+                }
+                .temperture__min,
+                .temperture__max {
+                    position: relative;
+                    font-weight: 300;
+                    font-size: 32px;
+                    margin: 0 32px;
+                }
+                .temperture__max {
+                    &::before {
+                        width: 15px;
+                        height: 15px;
+                    }
+                    &::after {
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+                }
+                .temperture__min {
+                    &::before {
+                        width: 15px;
+                        height: 15px;
+                    }
+                    &::after {
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

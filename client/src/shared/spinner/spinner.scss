@@ -1,0 +1,8 @@
+.spinner {
+    .first-circle {
+        fill: var(#{--spinner-first-circle-default});;    
+    }
+    .second-circle {
+        fill: var(#{--spinner-second-circle-default});;
+    }
+}
