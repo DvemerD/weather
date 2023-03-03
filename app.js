@@ -1,7 +1,7 @@
 const express = require('express');
+const path = require('path');
 process.env['NODE_CONFIG_DIR'] = path.join(__dirname, 'config/')
 const config = require('config');
-const path = require('path');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
